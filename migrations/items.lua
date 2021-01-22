@@ -84,22 +84,6 @@ local madclowns = {
 	"75%-uranium",
 	"algae-orange",
 	"algae-violet",
-	"angels-ore1",
-	"angels-ore1-crystal",
-	"angels-ore1-pure",
-	"angels-ore2",
-	"angels-ore2-crushed",
-	"angels-ore2-crystal",
-	"angels-ore3",
-	"angels-ore3-chunk",
-	"angels-ore4",
-	"angels-ore4-chunk",
-	"angels-ore4-pure",
-	"angels-ore5",
-	"angels-ore5-crystal",
-	"angels-ore5-pure",
-	"angels-ore6",
-	"angels-ore6-crushed",
 	"caesium-137",
 	"catalysator-brown",
 	"catalysator-green",
@@ -187,7 +171,7 @@ local madclowns = {
 	"water-saline",
 }
 
-for i = 1, 7, 1 do
+for i = 1, 9, 1 do
   for _, ores in pairs({
     "clowns-ore" .. i,
     "clowns-ore" .. i .. "-crushed",
@@ -196,6 +180,10 @@ for i = 1, 7, 1 do
   }) do
     table.insert(madclowns, ores)
   end
+end
+
+for i = 11, 15, 1 do
+  table.concat(madclowns, "clowns-ore" .. i)
 end
 
 local Items = {items = {}}
